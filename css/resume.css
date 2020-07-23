@@ -126,7 +126,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #0d6ed6;
+  background-color: #0f0f0f;
 }
 
 .dev-icons {
@@ -134,7 +134,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #0d6ed6;
+  color: #0f0f0f;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -214,7 +214,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .project-description {
-  background: #0D6ED6;
+  background: #0f0f0f;
   border-radius: 0px;
   padding-bottom: 2px;
   margin-top: 30px;
@@ -249,15 +249,15 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #0d6ed6 !important;
+  background-color: #0f0f0f !important;
 }
 
 .text-primary {
-  color: #0d6ed6 !important;
+  color: #0f0f0f !important;
 }
 
 a {
-  color: #0d6ed6;
+  color: #0f0f0f;
 }
 
 a:hover, a:focus, a:active {
