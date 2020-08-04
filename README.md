@@ -1,3 +1,7 @@
+If you use, thanks to consider a payment
+
+[![paypal](https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S63KZ9HQBTMJE)
+
 Use and Agreement Contract
 
 Owner: Michael Andre Franiatte.
