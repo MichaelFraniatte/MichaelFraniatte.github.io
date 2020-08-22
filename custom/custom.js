@@ -18,16 +18,4 @@ $(function() {
             }
         }
     });
-    //affix
-    $(window).on('scroll', function (event) {
-    var scrollValue = $(window).scrollTop();
-    var offset = $('[data-spy="affix"]').attr('data-offset-top');
-       if (scrollValue > offset) {
-         $('[data-spy="affix"]').addClass('affix-top');
-         var width = $('[data-spy="affix"]').parent().width();
-         $('.affix-top').css('width', width);
-       } else{
-         $('[data-spy="affix"]').removeClass('affix-top');
-       }
-    }); 
 });

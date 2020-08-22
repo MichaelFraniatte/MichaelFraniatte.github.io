@@ -7,7 +7,7 @@
 */
 
 .affix {
-    top: 0px;
+    position: fixed;
 }
 
 .vertical-nav {
