@@ -6,11 +6,6 @@
 *
 */
 
-p {
-    white-space: pre;
-    word-break: break-word;
-}
-
 .vertical-nav {
   min-width: 17rem;
   width: 17rem;
