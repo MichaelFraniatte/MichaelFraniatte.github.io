@@ -18,4 +18,11 @@ $(function() {
             }
         }
     });
+   //affix
+	$(window).on('scroll', function(event) {
+    	var scrollValue = $(window).scrollTop();
+    	if (scrollValue == settings.scrollTopPx || scrollValue > 70) {
+    	     $('#sidebarCollapse').addClass('fixed-top');
+    	} 
+	});
 });
