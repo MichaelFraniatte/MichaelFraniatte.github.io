@@ -18,8 +18,8 @@ $(function() {
             }
         }
     });
-   //affix
-   $(window).on('scroll', function (event) {
+    //affix
+    $(window).on('scroll', function (event) {
     var scrollValue = $(window).scrollTop();
     var offset = $('[data-spy="affix"]').attr('data-offset-top');
        if (scrollValue > offset) {
