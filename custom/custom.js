@@ -1,11 +1,13 @@
-var valsection = "";
+//var valsection = "";
 
 $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	setTimeout(navigate, 500);
+	jQuery('body').addClass('affix');
+	setTimeout(unblock, 1000);
+	//setTimeout(navigate, 500);
     });
 
     //Smooth scrolling to page anchor on click
@@ -14,7 +16,7 @@ $(function() {
 	{
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-	    valsection = anchor;
+	    //valsection = anchor;
             if (anchor.length) {
                 $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
             }
@@ -47,8 +49,12 @@ function checkActiveSection() {
     }) ;
 }
 
-function navigate() {
+function unblock() {
+    jQuery('body').removeClass('affix');
+}
+
+/*function navigate() {
     if (valsection.length) {
         $("html, body").animate({ scrollTop: valsection.offset().top }, 1500);
     }
-}
+}*/
