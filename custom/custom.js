@@ -28,12 +28,12 @@ $(function() {
 function checkActiveSection()
 {
     var fromTop = jQuery(window).scrollTop() ;
-    jQuery('#sections .section').each(function(){
+    jQuery('.resume-section').each(function(){
         var sectionOffset = jQuery(this).offset() ;
         if ( sectionOffset.top <= fromTop )
         {
-            jQuery('#navbar li').removeClass('active') ;
-            jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"]').addClass('active') ;
+            jQuery('.nav li').removeClass('active') ;
+            jQuery('.nav li[data-id="'+jQuery(this).data('id')+'"]').addClass('active') ;
             
         }
     }) ;
