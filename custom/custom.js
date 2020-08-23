@@ -16,9 +16,9 @@ $(function() {
 	{
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
+	    valsection = anchor;
             if (anchor.length) {
                 $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
-	    	valsection = anchor;
             }
         }
     });
