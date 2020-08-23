@@ -10,9 +10,7 @@ $(function() {
         }
     });
 
-    /**
-    * Smooth scrolling to page anchor on click
-    **/
+    //Smooth scrolling to page anchor on click
     $("a[href*='#']:not([href='#'])").click(function() {
         if (location.hostname == this.hostname && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) 
 	{
