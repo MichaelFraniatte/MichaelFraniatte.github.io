@@ -1,11 +1,11 @@
-//var valsection = "";
+var valsection = "";
 
 $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	jQuery('body').addClass('affix');
+	jQuery(valsection).addClass('affix');
 	setTimeout(unblock, 1000);
 	//setTimeout(navigate, 500);
     });
@@ -16,7 +16,7 @@ $(function() {
 	{
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-	    //valsection = anchor;
+	    valsection = anchor;
             if (anchor.length) {
                 $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
             }
@@ -35,7 +35,7 @@ function checkActiveSection() {
         var sectionOffset = jQuery(this).offset();
         if (sectionOffset.top <= fromTop)
         {
-	    //valsection = $(this);
+	    valsection = $(this);
             jQuery('#navbar li a').addClass('text-dark');
 	    jQuery('#navbar li a').addClass('bg-light');
             jQuery('#navbar li a').removeClass('text-light');
@@ -50,7 +50,7 @@ function checkActiveSection() {
 }
 
 function unblock() {
-    jQuery('body').removeClass('affix');
+    jQuery(valsection).removeClass('affix');
 }
 
 /*function navigate() {
