@@ -5,7 +5,7 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	setTimeout(navigate(valsection), 1000);
+	setTimeout(navigate(valsection), 1500);
     });
 
     /**
