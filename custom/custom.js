@@ -5,7 +5,9 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	setTimeout(navigate(valsection), 1500);
+        if (valsection.length) {
+            $("html, body").animate({ scrollTop: valsection.offset().top }, 1500);
+        }
     });
 
     /**
@@ -36,7 +38,6 @@ function checkActiveSection()
         var sectionOffset = jQuery(this).offset();
         if (sectionOffset.top <= fromTop)
         {
-	    //valsection = $(this);
             jQuery('#navbar li a').addClass('text-dark');
 	    jQuery('#navbar li a').addClass('bg-light');
             jQuery('#navbar li a').removeClass('text-light');
@@ -48,10 +49,4 @@ function checkActiveSection()
             
         }
     }) ;
-}
-
-function navigate(anchor) {
-    if (anchor.length) {
-         $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
-    }
 }
