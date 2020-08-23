@@ -1,8 +1,18 @@
+var valclick = "";
+
 $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
+	if (location.hostname == valclick.hostname && valclick.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) 
+	{
+            var anchor = $(valclick.hash);
+            anchor = anchor.length ? anchor : $("[name=" + valclick.hash.slice(1) +"]");
+            if ( anchor.length ) {
+                $("html, body").animate( { scrollTop: anchor.offset().top }, 1500);
+            }
+        }
     });
 
     /**
@@ -29,7 +39,8 @@ function checkActiveSection()
 {
     var fromTop = jQuery(window).scrollTop() ;
     jQuery('.resume-section').each(function(){
-        var sectionOffset = jQuery(this).offset() ;
+        var sectionOffset = jQuery(this).offset();
+	valclick = this;
         if ( sectionOffset.top <= fromTop )
         {
             jQuery('#navbar li a').addClass('text-dark');
