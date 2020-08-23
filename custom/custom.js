@@ -32,8 +32,8 @@ function checkActiveSection()
         var sectionOffset = jQuery(this).offset() ;
         if ( sectionOffset.top <= fromTop )
         {
-            jQuery('.nav li').removeClass('active') ;
-            jQuery('.nav li[data-id="'+jQuery(this).data('id')+'"]').addClass('active') ;
+            jQuery('#navbar li').removeClass('active') ;
+            jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"]').addClass('active') ;
             
         }
     }) ;
