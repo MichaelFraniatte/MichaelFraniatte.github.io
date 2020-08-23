@@ -5,9 +5,8 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	//jQuery(valsection).addClass('affix');
-	//setTimeout(unblock, 1000);
-	setTimeout(navigate, 500);
+	navigate();
+	setTimeout(navigate, 250);
     });
 
     //Smooth scrolling to page anchor on click
@@ -49,12 +48,8 @@ function checkActiveSection() {
     }) ;
 }
 
-/*function unblock() {
-    jQuery(valsection).removeClass('affix');
-}*/
-
 function navigate() {
     if (valsection.length) {
-        $("html, body").animate({ scrollTop: valsection.offset().top }, 1500);
+        $("html, body").animate({ scrollTop: valsection.offset().top }, 250);
     }
 }
