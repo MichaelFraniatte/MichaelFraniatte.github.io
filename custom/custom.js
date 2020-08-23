@@ -1,17 +1,13 @@
-var valclick = "";
+var valsection = "";
 
 $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	if (location.hostname == valclick.hostname && valclick.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) 
-	{
-            var anchor = $(valclick.hash);
-            anchor = anchor.length ? anchor : $("[name=" + valclick.hash.slice(1) +"]");
-            if ( anchor.length ) {
-                $("html, body").animate( { scrollTop: anchor.offset().top }, 1500);
-            }
+        var anchor = valsection;
+        if ( anchor.length ) {
+             $("html, body").animate( { scrollTop: anchor.offset().top }, 1500);
         }
     });
 
@@ -21,7 +17,6 @@ $(function() {
     $("a[href*='#']:not([href='#'])").click(function() {
         if (location.hostname == this.hostname && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) 
 	{
-	    valclick = this;
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
             if ( anchor.length ) {
@@ -40,6 +35,7 @@ function checkActiveSection()
 {
     var fromTop = jQuery(window).scrollTop() ;
     jQuery('.resume-section').each(function(){
+	valsection = $(this.hash);
         var sectionOffset = jQuery(this).offset();
         if ( sectionOffset.top <= fromTop )
         {
