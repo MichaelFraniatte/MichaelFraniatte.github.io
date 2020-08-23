@@ -4,16 +4,9 @@ $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
-	navigate();
-	setTimeout(navigate, 50);
-	setTimeout(navigate, 100);
-	setTimeout(navigate, 150);
-	setTimeout(navigate, 200);
-	setTimeout(navigate, 250);
-	setTimeout(navigate, 300);
-	setTimeout(navigate, 350);
-	setTimeout(navigate, 400);
-	setTimeout(navigate, 450);
+	for (int n = 0; n <= 500; n++=) {
+		setTimeout(navigate, n);
+	}
         $('#sidebar, #content').toggleClass('active');
     });
 
@@ -37,12 +30,12 @@ $(function() {
 });
 
 function checkActiveSection() {
-    setTimeout(enableActiveSection, 500);
+    setTimeout(enableActiveSection, 300);
 }
 
 function navigate() {
     if (valsection.length) {
-        $("html, body").animate({ scrollTop: valsection.offset().top }, 50);
+        $("html, body").animate({ scrollTop: valsection.offset().top }, 0);
     }
 }
 
