@@ -50,7 +50,7 @@ function checkActiveSection()
     }) ;
 }
 
-function navigate(var anchor) {
+function navigate(anchor) {
     if (anchor.length) {
          $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
     }
