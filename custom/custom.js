@@ -32,8 +32,14 @@ function checkActiveSection()
         var sectionOffset = jQuery(this).offset() ;
         if ( sectionOffset.top <= fromTop )
         {
-            jQuery('#navbar li').removeClass('active') ;
-            jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"]').addClass('active') ;
+            jQuery('#navbar li a').addClass('text-dark');
+	    jQuery('#navbar li a').addClass('bg-light');
+            jQuery('#navbar li a').removeClass('text-light');
+	    jQuery('#navbar li a').removeClass('bg-dark');
+            jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"] a').removeClass('text-dark');
+	    jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"] a').removeClass('bg-light');
+            jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"] a').addClass('text-light');
+	    jQuery('#navbar li[data-id="'+jQuery(this).data('id')+'"] a').addClass('bg-dark');
             
         }
     }) ;
