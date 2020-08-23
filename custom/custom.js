@@ -21,6 +21,7 @@ $(function() {
     $("a[href*='#']:not([href='#'])").click(function() {
         if (location.hostname == this.hostname && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) 
 	{
+	    valclick = this;
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
             if ( anchor.length ) {
@@ -40,7 +41,6 @@ function checkActiveSection()
     var fromTop = jQuery(window).scrollTop() ;
     jQuery('.resume-section').each(function(){
         var sectionOffset = jQuery(this).offset();
-	valclick = this;
         if ( sectionOffset.top <= fromTop )
         {
             jQuery('#navbar li a').addClass('text-dark');
