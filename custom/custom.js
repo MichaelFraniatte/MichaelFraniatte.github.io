@@ -5,9 +5,15 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
 	navigate();
-	setTimeout(navigate, 30);
-	setTimeout(navigate, 60);
-	setTimeout(navigate, 90);
+	setTimeout(navigate, 50);
+	setTimeout(navigate, 100);
+	setTimeout(navigate, 150);
+	setTimeout(navigate, 200);
+	setTimeout(navigate, 250);
+	setTimeout(navigate, 300);
+	setTimeout(navigate, 350);
+	setTimeout(navigate, 400);
+	setTimeout(navigate, 450);
         $('#sidebar, #content').toggleClass('active');
     });
 
@@ -31,12 +37,12 @@ $(function() {
 });
 
 function checkActiveSection() {
-    setTimeout(enableActiveSection, 300);
+    setTimeout(enableActiveSection, 500);
 }
 
 function navigate() {
     if (valsection.length) {
-        $("html, body").animate({ scrollTop: valsection.offset().top }, 30);
+        $("html, body").animate({ scrollTop: valsection.offset().top }, 50);
     }
 }
 
