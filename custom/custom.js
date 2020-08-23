@@ -5,7 +5,7 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	setTimeout(navigate, 2000);
+	setTimeout(navigate, 1);
     });
 
     //Smooth scrolling to page anchor on click
@@ -49,6 +49,6 @@ function checkActiveSection() {
 
 function navigate() {
     if (valsection.length) {
-        $("html, body").animate({ scrollTop: valsection.offset().top }, 1500);
+        $("html, body").animate({ scrollTop: valsection.offset().top }, 500);
     }
 }
