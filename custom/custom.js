@@ -4,7 +4,7 @@ $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
-	for (var n = 0; n <= 400; n++) {
+	for (var n = 0; n <= 250; n++) {
 		setTimeout(navigate, n);
 	}
         $('#sidebar, #content').toggleClass('active');
