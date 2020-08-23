@@ -5,10 +5,7 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-        var anchor = valsection;
-        if (anchor.length) {
-             $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
-        }
+	setTimeout(navigate(valsection), 1000);
     });
 
     /**
@@ -51,4 +48,10 @@ function checkActiveSection()
             
         }
     }) ;
+}
+
+function navigate(var anchor) {
+    if (anchor.length) {
+         $("html, body").animate({ scrollTop: anchor.offset().top }, 1500);
+    }
 }
