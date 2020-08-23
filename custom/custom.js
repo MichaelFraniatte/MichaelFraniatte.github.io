@@ -35,7 +35,7 @@ function checkActiveSection()
 {
     var fromTop = jQuery(window).scrollTop() ;
     jQuery('.resume-section').each(function(){
-	valsection = $("a[href*='#']:not([href='#'])").hash;
+	valsection = $(this);
         var sectionOffset = jQuery(this).offset();
         if ( sectionOffset.top <= fromTop )
         {
