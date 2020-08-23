@@ -29,14 +29,7 @@ $(function() {
 });
 
 function checkActiveSection() {
-    var fromTop = jQuery(window).scrollTop() ;
-    jQuery('.resume-section').each(function(){
-        var sectionOffset = jQuery(this).offset();
-        if (sectionOffset.top <= fromTop) {
-	    var section = $(this);
-	    setTimeout(enableActiveSection(section), 100);
-        }
-    }) ;
+    setTimeout(enableActiveSection, 100);
 }
 
 function navigate() {
@@ -45,14 +38,20 @@ function navigate() {
     }
 }
 
-function enableActiveSection(section) {
-	valsection = section;
-	jQuery('#navbar li a').addClass('text-dark');
-	jQuery('#navbar li a').addClass('bg-light');
-	jQuery('#navbar li a').removeClass('text-light');
-	jQuery('#navbar li a').removeClass('bg-dark');
-	jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').removeClass('text-dark');
-	jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').removeClass('bg-light');
-	jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').addClass('text-light');
-	jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').addClass('bg-dark');
+function enableActiveSection() {
+    var fromTop = jQuery(window).scrollTop();
+    jQuery('.resume-section').each(function(){
+        var sectionOffset = jQuery(this).offset();
+        if (sectionOffset.top <= fromTop) {
+		valsection = section;
+		jQuery('#navbar li a').addClass('text-dark');
+		jQuery('#navbar li a').addClass('bg-light');
+		jQuery('#navbar li a').removeClass('text-light');
+		jQuery('#navbar li a').removeClass('bg-dark');
+		jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').removeClass('text-dark');
+		jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').removeClass('bg-light');
+		jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').addClass('text-light');
+		jQuery('#navbar li[data-id="' + jQuery(section).data('id') + '"] a').addClass('bg-dark');
+        }
+    });
 }
