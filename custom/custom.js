@@ -33,6 +33,7 @@ function checkActiveSection() {
         var sectionOffset = jQuery(this).offset();
         if (sectionOffset.top <= fromTop)
         {
+	    valsection = $(this);
             jQuery('#navbar li a').addClass('text-dark');
 	    jQuery('#navbar li a').addClass('bg-light');
             jQuery('#navbar li a').removeClass('text-light');
