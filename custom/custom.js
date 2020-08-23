@@ -4,9 +4,8 @@ $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
-        $('#sidebar, #content').toggleClass('active');
 	navigate();
-	setTimeout(navigate, 250);
+        $('#sidebar, #content').toggleClass('active');
     });
 
     //Smooth scrolling to page anchor on click
@@ -32,24 +31,27 @@ function checkActiveSection() {
     var fromTop = jQuery(window).scrollTop() ;
     jQuery('.resume-section').each(function(){
         var sectionOffset = jQuery(this).offset();
-        if (sectionOffset.top <= fromTop)
-        {
-	    valsection = $(this);
-            jQuery('#navbar li a').addClass('text-dark');
-	    jQuery('#navbar li a').addClass('bg-light');
-            jQuery('#navbar li a').removeClass('text-light');
-	    jQuery('#navbar li a').removeClass('bg-dark');
-            jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('text-dark');
-	    jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('bg-light');
-            jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('text-light');
-	    jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('bg-dark');
-            
+        if (sectionOffset.top <= fromTop) {
+	    var section = $(this);
+	    setTimeout(enableActiveSection(section), 100);
         }
     }) ;
 }
 
 function navigate() {
     if (valsection.length) {
-        $("html, body").animate({ scrollTop: valsection.offset().top }, 250);
+        $("html, body").animate({ scrollTop: valsection.offset().top }, 0);
     }
+}
+
+function enableActiveSection(section) {
+	valsection = section;
+	jQuery('#navbar li a').addClass('text-dark');
+	jQuery('#navbar li a').addClass('bg-light');
+	jQuery('#navbar li a').removeClass('text-light');
+	jQuery('#navbar li a').removeClass('bg-dark');
+	jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('text-dark');
+	jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('bg-light');
+	jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('text-light');
+	jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('bg-dark');
 }
