@@ -5,7 +5,7 @@ $(function() {
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
         $('#sidebar, #content').toggleClass('active');
-	setTimeout(navigate(valsection), 2500);
+	setTimeout(navigate(valsection), 1500);
     });
 
     /**
@@ -36,7 +36,7 @@ function checkActiveSection()
         var sectionOffset = jQuery(this).offset();
         if (sectionOffset.top <= fromTop)
         {
-	    valsection = $(this);
+	    //valsection = $(this);
             jQuery('#navbar li a').addClass('text-dark');
 	    jQuery('#navbar li a').addClass('bg-light');
             jQuery('#navbar li a').removeClass('text-light');
