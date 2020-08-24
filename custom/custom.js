@@ -41,11 +41,11 @@ function navigate() {
 
 function enableActiveSection() {
     var fromTop = jQuery(window).scrollTop();
-    if (fromTop == 0) {
-	jQuery('#navbar li a').addClass('text-dark');
-	jQuery('#navbar li a').addClass('bg-light');
-	jQuery('#navbar li a').removeClass('text-light');
-	jQuery('#navbar li a').removeClass('bg-dark');
+    if (fromTop <= 10) {
+	jQuery('#navbar li[data-id=1] a').removeClass('text-dark');
+	jQuery('#navbar li[data-id=1] a').removeClass('bg-light');
+	jQuery('#navbar li[data-id=1] a').addClass('text-light');
+	jQuery('#navbar li[data-id=1] a').addClass('bg-dark');
     }
     jQuery('.resume-section').each(function(){
         var sectionOffset = jQuery(this).offset();
