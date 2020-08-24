@@ -41,6 +41,12 @@ function navigate() {
 
 function enableActiveSection() {
     var fromTop = jQuery(window).scrollTop();
+    if (fromTop == 0) {
+	jQuery('#navbar li a').addClass('text-dark');
+	jQuery('#navbar li a').addClass('bg-light');
+	jQuery('#navbar li a').removeClass('text-light');
+	jQuery('#navbar li a').removeClass('bg-dark');
+    }
     jQuery('.resume-section').each(function(){
         var sectionOffset = jQuery(this).offset();
         if (sectionOffset.top <= fromTop) {
