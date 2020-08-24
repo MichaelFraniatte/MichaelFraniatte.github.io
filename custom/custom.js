@@ -30,7 +30,7 @@ $(function() {
 });
 
 function checkActiveSection() {
-    setTimeout(enableActiveSection, 50);
+    setTimeout(enableActiveSection, 30);
 }
 
 function navigate() {
