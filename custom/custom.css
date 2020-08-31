@@ -6,6 +6,10 @@
 *
 */
 
+#smallbox {
+    cursor: pointer;
+}
+
 .affix {
     position: fixed;
 }
