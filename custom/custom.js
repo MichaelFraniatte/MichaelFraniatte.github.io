@@ -35,7 +35,7 @@ function checkActiveSection() {
 
 function navigate() {
     if (valsection.length) {
-        $("html, body").animate({ scrollTop: valsection.offset().top }, 0);
+        $("html, body").scrollTop(valsection.offset().top);
     }
 }
 
