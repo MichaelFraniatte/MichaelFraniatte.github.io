@@ -16,7 +16,7 @@ $(function() {
 	{
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-	    valsection = anchor;
+	        valsection = anchor;
             if (anchor.length) {
                 $("html, body").animate({ scrollTop: anchor.offset().top }, 1000);
             }
@@ -42,23 +42,23 @@ function navigate() {
 function enableActiveSection() {
     var fromTop = jQuery(window).scrollTop();
     if (fromTop <= 10) {
-	jQuery('#navbar li[data-id=1] a').removeClass('text-dark');
-	jQuery('#navbar li[data-id=1] a').removeClass('bg-light');
-	jQuery('#navbar li[data-id=1] a').addClass('text-light');
-	jQuery('#navbar li[data-id=1] a').addClass('bg-dark');
+	    jQuery('#navbar li[data-id=1] a').removeClass('text-dark');
+	    jQuery('#navbar li[data-id=1] a').removeClass('bg-light');
+	    jQuery('#navbar li[data-id=1] a').addClass('text-light');
+	    jQuery('#navbar li[data-id=1] a').addClass('bg-dark');
     }
     jQuery('.resume-section').each(function(){
         var sectionOffset = jQuery(this).offset();
         if (sectionOffset.top <= fromTop) {
-		valsection = $(this);
-		jQuery('#navbar li a').addClass('text-dark');
-		jQuery('#navbar li a').addClass('bg-light');
-		jQuery('#navbar li a').removeClass('text-light');
-		jQuery('#navbar li a').removeClass('bg-dark');
-		jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('text-dark');
-		jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('bg-light');
-		jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('text-light');
-		jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('bg-dark');
+		    valsection = $(this);
+		    jQuery('#navbar li a').addClass('text-dark');
+		    jQuery('#navbar li a').addClass('bg-light');
+		    jQuery('#navbar li a').removeClass('text-light');
+		    jQuery('#navbar li a').removeClass('bg-dark');
+		    jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('text-dark');
+		    jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').removeClass('bg-light');
+		    jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('text-light');
+		    jQuery('#navbar li[data-id="' + jQuery(this).data('id') + '"] a').addClass('bg-dark');
         }
     });
 }
