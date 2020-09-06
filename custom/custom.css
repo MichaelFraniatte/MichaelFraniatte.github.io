@@ -54,12 +54,6 @@ body {
     overflow-x: hidden;
 }
 
-.separator {
-  width: 20%;
-  left: 0;
-  border-bottom: 1px solid #fff;
-}
-
 .text-uppercase {
   letter-spacing: 0.1em;
 }
@@ -75,4 +69,8 @@ body {
     position: fixed;
     display: inline;
     float: left;
+}
+
+hr {
+    border-color: white;
 }
