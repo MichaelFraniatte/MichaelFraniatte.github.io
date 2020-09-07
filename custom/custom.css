@@ -64,8 +64,7 @@
 }
 
 body {
-    background: -webkit-linear-gradient(to right, #343a40, rgba(10, 50, 50, 0.8));
-    background: linear-gradient(to right, #343a40, rgba(10, 50, 50, 0.8));
+    background: linear-gradient(to right, rgba(20, 22, 28, 0.95), #566);
     overflow-x: hidden;
 }
 
