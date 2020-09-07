@@ -49,8 +49,8 @@
 }
 
 body {
-    background: -webkit-linear-gradient(to left,#32dfce,#6f54f8);
-    background: linear-gradient(to left,#32dfce,#6f54f8);
+    background: -webkit-linear-gradient(to left,#283048,#859398);
+    background: linear-gradient(to left,#283048,#859398);
     overflow-x: hidden;
 }
 
