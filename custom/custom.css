@@ -64,7 +64,7 @@
 }
 
 body {
-    background: linear-gradient(to right, rgba(20, 22, 28, 0.95), #566);
+    background: linear-gradient(to right, rgba(52, 58, 64, 1), rgba(52, 58, 64, 1), rgba(52, 58, 64, 0.99), rgba(52, 58, 64, 0.96), rgba(52, 58, 64, 0.93), rgba(52, 58, 64, 0.89), rgba(52, 58, 64, 0.84));
     overflow-x: hidden;
 }
 
