@@ -45,7 +45,6 @@
     margin-right: 17rem;
     margin-top: 0;
     margin-bottom: 0;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 #sidebar.active {
@@ -74,4 +73,9 @@ body {
 
 hr {
     border-color: white;
+}
+
+footer {
+    margin-top: 16px;
+    margin-bottom:0px
 }
