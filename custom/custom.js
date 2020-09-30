@@ -4,16 +4,16 @@ $(function() {
 
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
-	for (var n = 0; n <= 250; n++) {
-		setTimeout(navigate, n);
-	}
+	    for (var n = 0; n < 250; n++) {
+		    setTimeout(navigate, n);
+		    setTimeout(navigate, n + 1);
+	    }
         $('#sidebar, #content').toggleClass('active');
     });
 
     //Smooth scrolling to page anchor on click
     $("a[href*='#']:not([href='#'])").click(function() {
-        if (location.hostname == this.hostname && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) 
-	{
+        if (location.hostname == this.hostname && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) {
             var anchor = $(this.hash);
             anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
 	        valsection = anchor;
@@ -30,7 +30,7 @@ $(function() {
 });
 
 function checkActiveSection() {
-    setTimeout(enableActiveSection, 30);
+    setTimeout(enableActiveSection, 50);
 }
 
 function navigate() {
