@@ -85,29 +85,3 @@ a {
     color: #fff;
     text-decoration: none;
 }
-
-@keyframes slidingtoright {
-    0% {
-        background-position-x: 0;
-    }
-    100% {
-        background-position-x: -100%;
-    }
-}
-
-@keyframes slidingtoleft {
-    0% {
-        background-position-x: -100%;
-    }
-    100% {
-        background-position-x: 0%;
-    }
-}
-
-.slidingtorightclass {
-    animation: 2s linear infinite slidingtoright;
-}
-
-.slidingtoleftclass {
-    animation: 2s linear infinite slidingtoleft;
-}
