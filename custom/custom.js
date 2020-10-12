@@ -99,7 +99,7 @@ function typeWriter() {
         j = 0;
         txt = txtarray[next];
         next++;
-        if (next >= 4) {
+        if (next >= txtarray.length) {
             next = 0;
         }
     }
