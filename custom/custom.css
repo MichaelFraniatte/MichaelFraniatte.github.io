@@ -6,14 +6,18 @@
 *
 */
 
+body {
+    font-size: 1.3vw;
+}
+
 #smallbox {
     cursor: pointer;
 }
 
 #sidebarCollapse {
     text-decoration: none;
-    width: 20px;
-    height: 25px;
+    width: 3vh;
+    height: 4vh;
     position: fixed;
     display: inline;
     float: left;
@@ -27,11 +31,14 @@
 
 .sidebar-subheader {
     background: #dae0e5;
+    height: 10vh;
+    padding-left: 5vh;
+    padding-top:3vh;
 }
 
 .vertical-nav {
-    min-width: 17rem;
-    width: 17rem;
+    min-width: 40vh;
+    width: 40vh;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -40,15 +47,15 @@
 }
 
 .page-content {
-    width: calc(100% - 17rem);
-    margin-left: 17rem;
-    margin-right: 17rem;
+    width: calc(100% - 40vh);
+    margin-left: 40vh;
+    margin-right: 40vh;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 #sidebar.active {
-    margin-left: -17rem;
+    margin-left: -40vh;
     transition-duration: 0.3s;
 }
 
@@ -84,4 +91,10 @@ footer {
 a {
     color: #fff;
     text-decoration: none;
+}
+
+.resume-section img {
+    object-fit: fill;
+    width: auto;
+    height: 25vh;
 }
